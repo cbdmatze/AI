@@ -1,3 +1,6 @@
+# pip install spacy
+# python -m spacy download en_core_web_sm
+
 import spacy
 from collections import Counter
 from itertools import islice

@@ -613,32 +613,85 @@
     >>> N-grams: Sequences of n words or characters, e.g., "apple pie recipe with ice cream".
     
 
-
-🧬
-
-
-🧬
+**********************************************************************************************************
+                            🧬_Word Embeddings (e.g., Word2Vec, GloVe)_🧬
+**********************************************************************************************************
 
 
-🧬
+🧬  Definition:
+    Word embeddings map words into a lower-dimensional vector pace where similar words are placed closer
+    together.
 
 
-🧬
+🧬  Benefits:
+    Captures semantic relationships: "king" and "queen" might have similar vectors.
 
 
-🧬
+🧬  Reduces dimensionality:
+    Instead of thousands of features, embeddings might have 100-300 dimensions.
 
 
-🧬
+🧬  Examples:
+
+    >>> Word2Vec:
+    Learns embeddings by predicting words from surrounding context or vice versa.
+
+    >>> GloVe:
+    Uses global word co-occurence statistics to produce word embeddings.
 
 
-🧬
+🧬  Pros:
+    Richer representation of meaning, capturing synonyms and analogies.
 
 
-🧬
+🧬  Cons:
+    Embeddings trained on one data set might not reflect the nuances of another domain unless further 
+    fine-tuned.
+
+    
+**********************************************************************************************************
+                                            🧬_Basic NLP Tasks_🧬
+**********************************************************************************************************
 
 
-🧬
+🧬  Objective:
+    By the end of this section, you should be familiar with some fundamental NLP tasks, their significance, 
+    and how to apply basic tequniques or pre-trained tools to implement them.
+
+
+    Definition and Overview:
+
+    >>> Key Tasks in NLP:
+
+        >>> Sentiment Analysis
+        >>> Named Entity Recognition
+        >>> Part-of-Speech (POS) Tagging
+        >>> Text Classification
+
+    
+
+**********************************************************************************************************
+                                        🧬_Sentiment Analysis_🧬
+**********************************************************************************************************
+
+
+🧬  What is Sentiment Analysis?
+
+    Sentiment analysis aims to determine the emotional tone expressed in the text. It categorizes text as
+    positive, negative, or neutral.
+
+    Sentiment analysis is widely used in analyzing customer feedback, movie reviews, social media posts, 
+    and more.
+
+
+🧬  Example:
+
+    >>> Input: "I absolutely love this phone! the battery life is amazing, and the camera takes stunning
+    photos."
+
+    >>> Output: Positive sentiment
+
+    
 
 
 **********************************************************************************************************
