@@ -193,66 +193,425 @@
     Cleaning out URLs, removing special characters, extracting certain word patterns, or validating 
     formats like email addresses.
 
-
-🧬
-
-
-🧬
-
-
-🧬
-
-
-🧬
-
-
+    
 **********************************************************************************************************
-🧬__🧬
+                    🧬_Applications: Preparing Datasets for Machine Learning Models_🧬
 **********************************************************************************************************
 
 
-🧬
+🧬  The ultimate goal of text preprocessing is to transform raw data into a format that can be fed into
+    machine learning or deep learning models. 
+
+    This might involve
 
 
-🧬
+    >>> Building a pipeline:
+    A sequence of steps that starts from raw text, apllies tokenization, remove stop words, apply stemming/
+    lemmatization, and finally produce a list of clean tokens.
 
 
-🧬
+    >>> Vectorizing text:
+    Converting text into numerical representations that models can understand. This can be done using
+    techniques like Bag of Words, TF-IDF, or Word Embeddings.
 
 
-🧬
+    >>> Training and Evaluating Models:
+    Once the data is preprocessed and vectorized, it can be used to train and evaluate models for tasks
+    like sentiment analysis, text classification, or machine translation.
 
 
-🧬
+    >>> Fine-tuning and Iterating:
+    The preprocessing steps and vectorization techniques can be fine-tuned based on model performance,
+    allowing for iterative improvements in the NLP pipeline.
 
 
-🧬
-
-
-🧬
-
-
-🧬
-
-
-🧬
-
-
-🧬
-
-
-🧬
+    >>> Feature Engineering:
+    Creating consistent, clean textual inputs to ensure that models like a sentiment classifier or a text
+    categorization system can learn patterns effectively.
 
 
 **********************************************************************************************************
-🧬__🧬
+                                        🧬_Representing Text as Data_🧬
 **********************************************************************************************************
 
 
-🧬
+🧬  Objective:
+    By the end of this section, you should understand different approaches to representing text numerically
+    so that machines can process it. You will gain insights into simple methods like Bag of Words as well as
+    more advanced techniques like embeddings.
+
+    
+    __matrix-blue.gif__
+🧬  https://colonycheese-natashaexpand.codio.io/.guides/img/matrix-blue.gif
 
 
-🧬
+
+🧬  What does "Representing Text as Data" Mean???
+
+    Computers understand numbers, not words. To use text in machine learning models, we need to convert it 
+    into a numverical form.
+
+    Each piece of text - whether a word, a senctence, or an entire document - must be translated into a 
+    format a machine can process, such as vectors (lists of numbers).
+
+
+🧬  Challenges with Text Representation
+
+    >>> Context and Meaning:
+    Words have multiple meanings depending on context. For example, "bank" could mean a financial institution
+    or the side of a river.
+
+    
+    >>> Dimensionality:
+    Text datasets can be huge, and representing them often leads to very high-dimansional vectors (thousands 
+    or millions of features).
+    
+
+    >>> Sparsity:
+    Text data is often sparse, meaning most elements in the vector are zeros. This can make it challenging
+    to process and analyze.
+
+
+    >>> Semantics:
+    Representing the meaning of words and sentences in a way that captures their relationships is a complex
+    task.
+
+
+🧬  Common Text Representation Techniques
+
+    >>> Bag of Words (BoW):
+    A simple method that represents text as a matrix of word counts. It ignores word order and context,
+    focusing on word frequency.
+
+
+    >>> Term Frequency-Inverse Document Frequency (TF-IDF):
+    A more advanced technique that considers the importance of words in a document relative to their
+    frequency across all documents.
+
+
+    >>> Word Embeddings:
+    Dense, low-dimensional vectors that capture semantic relationships between words. Word embeddings are
+    learned from large text corpora using neural networks.
+
+
+    >>> Character Embeddings:
+    Similar to word embeddings, but they operate at the character level. They can capture morphological
+    and syntactic information.
+
+
+    >>> Contextual Embeddings:
+    Embeddings that consider the context of words in a sentence. They are generated using models like BERT
+    and GPT-3.
+
+
+    >>> Document Embeddings:
+    Vectors that represent entire documents, capturing their semantic content. They are useful for tasks
+    like document classification and clustering.
+
+
+    >>> Graph-Based Representations:
+    Representing text as graphs to capture relationships between words or sentences. Graph-based methods
+    can model complex dependencies in text data.
+
+
+    >>> Hybrid Approaches:
+    Combining multiple text representation techniques to leverage the strengths of each. For example,
+    combining BoW with word embeddings to capture both word frequency and semantics.
+
+
+    >>> Semantic Hashing:
+    Mapping text to binary codes that capture semantic similarity. Semantic hashing is useful for
+    information retrieval and similarity search.
+
+
+    >>> Knowledge Graphs:
+    Representing text as structured knowledge graphs to capture relationships between entities and concepts.
+    Knowledge graphs are useful for question answering and information extraction tasks.
+
+
+    >>> Attention Mechanisms:
+    Techniques that learn to focus on specific parts of text data. Attention mechanisms are useful for
+    tasks like machine translation and text summarization.
+
+
+    >>> Transfer Learning:
+    Leveraging pre-trained models to extract features from text data. Transfer learning can boost performance
+    on downstream NLP tasks.
+
+
+    >>> Multimodal Representations:
+    Combining text with other modalities like images, audio, or video. Multimodal representations are useful
+    for tasks like image captioning and video summarization.
+
+
+    >>> Explainable Representations:
+    Representations that can be interpreted by humans to understand how models make predictions. Explainable
+    representations are crucial for building trust in AI systems.
+
+
+    >>> Dynamic Representations:
+    Representations that change over time or adapt to new data. Dynamic representations are useful for
+    capturing evolving trends in text data.
+
+
+    >>> Privacy-Preserving Representations:
+    Techniques that protect sensitive information in text data. Privacy-preserving representations are
+    crucial for handling confidential or personal data.
+
+
+    >>> Multilingual Representations:
+    Representations that capture text in multiple languages. Multilingual representations are useful for
+    tasks like machine translation and cross-lingual information retrieval.
+
+
+    >>> Domain-Specific Representations:
+    Representations that capture specialized terminology and concepts in specific domains. Domain-specific
+    representations are useful for tasks like scientific text analysis and medical document processing.
+
+
+    >>> Scalable Representations:
+    Techniques that can handle large text datasets efficiently. Scalable representations are crucial for
+    processing big data and real-time text streams.
+
+
+    >>> Robust Representations:
+    Representations that are resilient to noise and errors in text data. Robust representations are crucial
+    for handling noisy or incomplete text data.
+
+
+    >>> Interpretable Representations:
+    Representations that can be easily understood and analyzed by humans. Interpretable representations are
+    crucial for explaining model predictions and building trust in AI systems.
+
+
+    >>> Adaptive Representations:
+    Representations that can adapt to changing contexts or tasks. Adaptive representations are useful for
+    handling dynamic text data and evolving NLP tasks.
+
+
+    >>> Fair Representations:
+    Representations that are unbiased and equitable across different groups. Fair representations are crucial
+    for building inclusive and ethical AI systems.
+
+
+    >>> Low-Resource Representations:
+    Techniques that can handle text data with limited labeled examples or resources. Low-resource representations
+    are crucial for developing NLP models in resource-constrained settings.
+
+
+    >>> Multiview Representations:
+    Representations that combine multiple perspectives or sources of information. Multiview representations are
+    useful for capturing diverse aspects of text data and improving model performance.
+
+
+    >>> Adversarial Representations:
+    Techniques that can defend against adversarial attacks on text data. Adversarial representations are crucial
+    for building secure and robust NLP models.
+
+
+    >>> Self-Supervised Representations:
+    Techniques that learn representations from unlabeled text data. Self-supervised representations are useful
+    for pretraining models and improving performance on downstream NLP tasks.
+
+
+    >>> Zero-Shot Representations:
+    Techniques that can generalize to new tasks or languages without additional training. Zero-shot representations
+    are useful for adapting models to novel scenarios and domains.
+
+
+    >>> Few-Shot Representations:
+    Techniques that can learn from a small number of labeled examples. Few-shot representations are useful for
+    developing NLP models in low-resource settings.
+
+
+    >>> Multitask Representations:
+    Representations that can handle multiple NLP tasks simultaneously. Multitask representations are useful for
+    improving model efficiency and generalization.
+
+
+    >>> Cross-Modal Representations:
+    Representations that capture relationships between text and other modalities like images or audio. Cross-modal
+    representations are useful for tasks like multimodal sentiment analysis and emotion recognition.
+
+
+    >>> Hierarchical Representations:
+    Representations that capture hierarchical structures in text data. Hierarchical representations are useful for
+    modeling complex relationships between words, sentences, and documents.
+
+
+    >>> Temporal Representations:
+    Representations that capture the temporal dynamics of text data. Temporal representations are useful for
+
+
+    >>> Sequential Representations:
+    Representations that capture the sequential nature of text data. Sequential representations are useful for
+    tasks like text generation and sequence labeling.
+
+
+    >>> Spatial Representations:
+    Representations that capture the spatial relationships between words or entities in text data. Spatial
+    representations are useful for tasks like document layout analysis and information extraction.
+
+
+    >>> Compositional Representations:
+    Representations that can be combined to form more complex structures. Compositional representations are
+    useful for modeling relationships between words and entities in text data.
+
+
+    >>> Multiscale Representations:
+    Representations that capture information at multiple levels of granularity. Multiscale representations are
+    useful for modeling text data with varying degrees of detail.
+
+
+    >>> Multiresolution Representations:
+    Representations that capture information at multiple levels of resolution. Multiresolution representations
+    are useful for modeling text data with varying levels of detail.
+
+
+    >>> Multitask Learning:
+    Learning multiple tasks simultaneously to improve model performance. Multitask learning is useful for
+    leveraging shared information across tasks and domains.
+
+
+    >>> Transfer Learning:
+    Leveraging knowledge from pre-trained models to improve performance on new tasks. Transfer learning is
+    useful for adapting models to different datasets and domains.
+
+
+    >>> Meta-Learning:
+    Learning to learn from a small number of examples. Meta-learning is useful for developing models that can
+    quickly adapt to new tasks and environments.
+
+
+    >>> Reinforcement Learning:
+    Learning to make decisions by interacting with an environment. Reinforcement learning is useful for
+    developing models that can learn from feedback and improve over time.
+
+
+    >>> Unsupervised Learning:
+    Learning patterns and structures from unlabeled data. Unsupervised learning is useful for discovering
+    hidden relationships in text data and generating novel insights.
+
+
+    >>> Supervised Learning:
+    Learning to make predictions from labeled data. Supervised learning is useful for developing models that
+    can classify text, extract information, or generate responses.
+
+
+    >>> Semisupervised Learning:
+    Learning from a combination of labeled and unlabeled data. Semisupervised learning is useful for developing
+    models in scenarios where labeled data is limited or expensive to obtain.
+
+
+    >>> Self-Supervised Learning:
+    Learning from data without human annotations. Self-supervised learning is useful for pretraining models
+    on large text corpora and improving performance on downstream tasks.
+
+
+    >>> Multimodal Learning:
+    Learning from multiple modalities like text, images, and audio. Multimodal learning is useful for developing
+    models that can understand and generate content across different domains.
+
+
+    >>> Multitask Learning:
+    Learning multiple tasks simultaneously to improve model performance. Multitask learning is useful for
+    leveraging shared information across tasks and domains.
+
+
+    >>> Sematic Relationships:
+    Similar words should have similar numeric representations. Capturing this isn't straightforward.
+
+
+**********************************************************************************************************
+                                        🧬_Bag of Words (BoW)_🧬
+**********************************************************************************************************
+
+
+🧬  Definition:
+    BoW represents text by counting how many times each word appears. It ignores grammar, order, and context.
+
+
+🧬  Process:
+    Suppose you have a vocabulary of the top 5000 words. Each document is turnd into a vector of length 5000,
+    where each position counts how often a certain word appears in that document. Each individual word is 
+    a feature and the corrensponding count is the feature's value.
+
+
+🧬  Pros:
+    Simple, easy to implement
+
+
+🧬  Cons:
+    Loses context and meaning; "amazing movie" and "movie amazing" become identical vectors.
+
+
+🧬  Example:
+    Document: "I love NLP"
+
+    Features: {"I": 1, "love": 1, "NLP": 1}
+
+    
+**********************************************************************************************************
+                            🧬_Term Frequency-Inverse Document Frequency (TF-IDF)_🧬
+**********************************************************************************************************
+
+
+🧬  Definition:
+    TF-IDF is an improvement over BoW. It considers not just how often a word appears in a single document
+    (Term Frequency) but also how rare it is across all documents (Inverse Document Frequency).
+
+
+🧬  Resuilt:
+    Words that appear frequently in one document but are rare across the whole corpus get higher scores, 
+    providing more discriminative power.
+
+
+🧬  Pros:
+    More informative than BoW, reduces the weight of commonly used words that carry less meaning.
+
+
+🧬  Cons:
+    Still doesn't capture word order or context well.
+
+
+🧬  Example:
+
+    >>> Documents: 
+    "The dog barked.",
+    "The cat sat on the mat.",
+    "The cat sat on the mat."
+
+    >>> Features:
+    ['barked' 'bed' 'cat' 'dog' 'mat' 'on' 'sat' 'the']]
+
+
+    >>> TF-IDF Matrix:
+    
+    [[0.         0.         0.37420726 0.         0.49203758 0.37420726
+    0.37420726 0.58121064]
+    [0.         0.49203758 0.37420726 0.         0.         0.37420726
+    0.37420726 0.58121064]
+    [0.65249088 0.         0.         0.65249088 0.         0.
+    0.         0.38537163]]
+
+
+
+**********************************************************************************************************
+                                            🧬_N-grams_🧬
+**********************************************************************************************************
+
+
+🧬  Definition:
+    Contiguous sequence of n items (typically words or characters) from a given text or speech.
+
+
+🧬  Types:
+
+    >>> Unigrams: Single words, e.g., "apple", "banana", "cherry".
+    >>> Bigrams: Pairs of words, e.g., "apple pie", "banana split".
+    >>> Trigrams: Triplets of words, e.g., "apple pie recipe", "banana split sundae".
+    >>> N-grams: Sequences of n words or characters, e.g., "apple pie recipe with ice cream".
+    
 
 
 🧬
