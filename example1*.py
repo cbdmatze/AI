@@ -30,8 +30,7 @@ print("Words without stop words:", words_no_stop)
 # Stemming using NLTK's PorterStemmer
 ps = PorterStemmer()
 words_stemmed = [ps.stem(word) for word in words_no_stop]
-print("Stemmed words:", words_stemmwed)
-
+print("Stemmed words:", words_stemmed)
 # Lemmatizing using spaCy
 words_lemmatized = [token.lemma_ for token in doc if not token.is_stop]
 print("Lemmatized words:", words_lemmatized)
