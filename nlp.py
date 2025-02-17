@@ -671,7 +671,7 @@
     
 
 **********************************************************************************************************
-                                        🧬_Sentiment Analysis_🧬
+                                            🧬_Sentiment Analysis_🧬
 **********************************************************************************************************
 
 
@@ -695,52 +695,198 @@
 
 
 **********************************************************************************************************
-🧬__🧬
+                                    🧬_Named Entity Recognition (NER)_🧬
 **********************************************************************************************************
 
 
-🧬
+🧬  What is NER?
+
+    Named Entity Recognition (NER) identifies and classifies entities in a text into predefined categories
+    such as person names, localizations, organizations, dates, and more. It helps to extract structured
+    information from unstructured text.
 
 
-🧬
+🧬  Example:
 
+    >>> Input: "Tony Kross visited Athens in August 2012."
 
-🧬
+    >>> Output:
 
-
-🧬
-
-
-🧬
-
-
-🧬
-
-
-🧬
-
-
-🧬
-
-
-🧬
-
-
-🧬
-
-
-🧬
+        >>> Person: Tony Kross
+        >>> Location: Athens
+        >>> Date: August 2012
 
 
 **********************************************************************************************************
-🧬__🧬
+                                    🧬_Part of Speech (POS) Tagging_🧬
 **********************************************************************************************************
 
 
-🧬
+🧬  What is part of speech tagging (POS)
+
+    POS tagging involves labeling each word in a sentence with its grammatical part-of-speech, such as 
+    noun, verb, adjective, etc. This helps in understanding sentence structure, wich is useful for parsing,
+    information extraction, and subsequent NLP tasks.
 
 
-🧬
+🧬  Example (pseudocode)
+
+    >>> Input: "The quick brown fox jumps over the lazy dog."
+
+    >>> Output:
+
+        >>> The: Determiner
+        >>> quick: Adjective
+        >>> brown: Adjective
+        >>> fox: Noun
+        >>> jumps: Verb
+        >>> over: Preposition
+        >>> the: Determiner
+        >>> lazy: Adjective
+        >>> dog: Noun
+
+
+
+**********************************************************************************************************
+                                            🧬_Text Classification_🧬
+**********************************************************************************************************
+
+
+🧬  What is Text Classification
+
+    Text classification assigns categories or labels to documents, sentences, or phrases based on their 
+    content. Examples include classifying emails into "spam" or "not spam", categorizing news articles by
+    topic, or labeling product reviews by sentiment or genre.
+
+
+🧬  Example:
+
+    >>> Input: "Breaking News: Stock prices plunge as markets react to global uncertainty."
+
+    >>> Output: "Finance" or "Business"
+
+
+🧬  Code example:
+
+'''
+text = "Breaking News: Stock prices plunge as markets react."
+if "stock" in text.lower() or "markets" in text.lower():
+    print("Category: Finance")
+else:
+    print("Category: Other")
+'''
+
+
+🧬  Summary and significance
+
+    >>> These tasks serve as building blocks for more complex applications (e.g., chatbots, recommendation 
+        systems, information extraction tools).
+
+    >>> They enhance search engines, improve human-computer interaction, and provide insights into unstructured
+        data.
+
+        
+**********************************************************************************************************
+                                        🧬_Techniques and Tools_🧬
+**********************************************************************************************************
+
+
+🧬  Pretrained Models and Libraries:
+
+    >>> SpaCy:
+        A fast, industrial-strength NLP library with pretrained models for tokenization, POS tagging, NER, 
+        and more.
+
+    >>> NLTK (Natural Language Toolkit):
+        One of the earliest and most widely used NLP libraries for beginners. It provides tools for tokenization,
+        stemming, lemmatization, and more.
+
+    >>> Gensim:
+        A library for topic modeling, document similarity, and word embeddings like Word2Vec.
+
+    >>> Transformers (Hugging Face):
+        A library that provides access to pretrained models like BERT, GPT-3, and T5 for various NLP tasks.
+
+    >>> Scikit-learn:
+        A popular machine learning library that provides tools for text classification, clustering, and more.
+
+    >>> TensorFlow and PyTorch:
+        Deep learning frameworks that offer tools for building and training custom NLP models.
+
+
+🧬  Practical Steps:
+
+    >>> Load a pretrained model from SpaCy or Hugging Face.
+    >>> Tokenize text into words or sentences.
+    >>> Apply POS tagging, NER, or sentiment analysis to the text.
+    >>> Use the output for downstream tasks like text classification or clustering.
+
+        >>> For sentiment analysis, you might start with a BoW or TF-IDF representation, and then train 
+            a classifier (like logistic regression or a neural network) on labeled data, to predict sentiment.
+
+        >>> For NER, tools like SpaCy come with pretrained models that can identify common entity types 
+            out-of-the-box.
+
+        >>> For POS tagging, libraries like NLTK or SpaCy can annotate each word in a sentence with its 
+            part-of-speech, helping you understand sentence structure.
+
+        >>> For text classification, you can start simple with a BoW representation and a machine learning
+            model and then move to embeddings for better performance.
+
+
+
+
+🧬   In Summary:
+
+    >>> Text preprocessing involves cleaning and preparing raw text, including tokenization, removing noice
+        (like stop words and punctuation), and normalizing words with stemming or lemmatization.
+
+    >>> Representing text as data transforms text into numeric vectors that models can understand, ranging 
+        from simple counts (BoW) to more sophisticated embeddings (Word2Vec, GloVe) that capbure semantic
+        meaning.
+
+    >>> Basic NLP tasks like sentiment analysis, NER, POS tagging, and text classification are practical
+        ways to gain experience and see tangible results in your early NLP projects.
+
+
+As you continue learning, these fundamental concepts will enable you to tackle more advanced topics
+and state-of-the-art NLP techniques with confidence.
+
+
+**********************************************************************************************************
+                                    🧬_Intruduction to LLMs_🧬
+**********************************************************************************************************
+
+
+🧬   Welcome to the world of Large Language Models (LLMs)!
+
+    These models have recently gained significant attention for their remarkable ability to understand
+    and generate human-like text across a wide range of tasks.
+
+    This lesson covers what language models are, how they evolved, what makes transformers and LLMs special,
+    and provides a hands on introduction to using them.
+
+
+🧬  Objective:
+
+    By the end of this lesson, you should be able to:
+
+    >>> Understand what a language model is and how it has evolved from simple statistical models to 
+        advanced neuronal architectures.
+
+    >>> Recognize the significance of transformaers and the attention mechanism.
+
+    >>> Understand the concepts of pre-training, fine-tuning, tokens, embeddings and how LLMs generate text.
+
+    >>> Identify popular LLMS like GPT-3, BERT, and T5 and their applications in NLP tasks and their 
+        unique characteristics.
+
+    Ready? Let's dive in!
+
+    
+**********************************************************************************************************
+                                        🧬_What is a language model_🧬
+**********************************************************************************************************
 
 
 🧬
